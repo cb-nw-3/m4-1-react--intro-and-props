@@ -1,5 +1,6 @@
 import React from "react";
 import "./ChatMessage.css";
+import Avatar from "./Avatar";
 
 const sentBubble = "/assets/tip-sent.svg";
 const receivedBubble = "/assets/tip-received.svg";
@@ -7,7 +8,7 @@ const receivedBubble = "/assets/tip-received.svg";
 function ChatMessageReceived({ message }) {
   return (
     <div className="chat-message-wrapper received">
-      <img className="avatar" src={message.user.avatar} alt="user avatar" />
+      <Avatar user={message.user} size={35} />
       <div className="chat-message">
         <div className="sender"> {message.user.username}</div>
         <div className="message-body">
