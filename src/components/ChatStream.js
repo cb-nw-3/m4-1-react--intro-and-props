@@ -11,12 +11,16 @@ import ChatMessage from './ChatMessage';
 // - a text color of #000
 // - a background color of #e9e9eb
 
-function ChatStream(props) {
+function ChatStream({messages, currentUser}) {
+
+  // console.log(currentUser);
   return (<section className="chat-stream">
-    
-    {props.messages.map(message =>
+    {messages.map(message =>
     {
-      return <ChatMessage message={message} />;
+     
+        return <ChatMessage message={message} currentUser= {currentUser} />;
+    
+        
       // return <div>{message.body}</div>;
     })}
     

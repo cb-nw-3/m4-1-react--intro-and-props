@@ -5,13 +5,14 @@ import ChatStream from './ChatStream';
 import Footer from './Footer';
 
 import './App.css';
+import HeaderAvatar from './HeaderAvatar';
 
 function App(props) {
-  console.log(props.conversation.messages);
+  //  console.log(props);
   return (
     <div className="wrapper">
-      <Header />
-      <ChatStream messages={props.conversation.messages} />
+      <Header users={props.users} currentUser={props.currentUser}/>
+      <ChatStream messages={props.conversation.messages} currentUser={props.currentUser} />
       <Footer />
     </div>
   );
