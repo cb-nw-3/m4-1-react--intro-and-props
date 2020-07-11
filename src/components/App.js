@@ -10,7 +10,7 @@ function App(props) {
   return (
     <div className="wrapper">
       <Header />
-      <ChatStream />
+      <ChatStream messages={props.conversation.messages} />
       <Footer />
     </div>
   );
