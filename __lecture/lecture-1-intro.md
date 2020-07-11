@@ -15,7 +15,11 @@ An _open-source project_ built and maintained by **facebook**.
 ### Super popular!
 
 <img src="./assets/npm-trends.png" />
-
+*
+-most popular
+-most in demand in compagnie
+-a JS library
+*
 ---
 
 ### Why is this needed?
@@ -31,7 +35,7 @@ An _open-source project_ built and maintained by **facebook**.
 
 - Small bits of code representing a portion of the UI
 - Reusable
-- Dynamic (can update the UI based on changes)
+- Dynamic (can update the UI based on changes, change overtime) (not like a template)
 
 ---
 
@@ -43,8 +47,8 @@ function GoButton(props) {
     </button>
   );
 }
-
-render(<GoButton onClick={() => alert('hi')} />);
+//calling the function, param html syntaxe
+render(<GoButton onClick={() => alert("hi")} />);
 ```
 
 ---
@@ -83,12 +87,12 @@ function GoButton(props) {
 // After
 function GoButton(props) {
   return React.createElement(
-    'button',
+    "button",
     {
-      className: 'btn',
+      className: "btn",
       onClick: props.handleClick,
     },
-    'Go!'
+    "Go!"
   );
 }
 ```
@@ -120,6 +124,10 @@ JSX:
 <label htmlFor="name-selector">Select your name</label>
 ```
 
+_
+className because could have abigue cases with JS
+_
+
 ---
 
 # Squigglies { }
@@ -131,7 +139,8 @@ A _slot_ in which we can write JavaScript expressions.
 ```jsx
 let index = 0;
 
-<div id={'item-' + index} />;
+<div id={"item-" + index} />;
+*{can put any JS expression}*
 ```
 
 ---
@@ -141,17 +150,14 @@ const awakeStudents = 10;
 const asleepStudents = 0;
 
 render(
-  <div>
-    There are {awakeStudents + asleepStudents} students in
-    the class.
-  </div>
+  <div>There are {awakeStudents + asleepStudents} students in the class.</div>
 );
 ```
 
 ---
 
 ```jsx
-<li className={isOnline && 'green'}>{user.username}</li>
+<li className={isOnline && "green"}>{user.username}</li>
 
 // ⚠️ New notation! another way to use of &&.
 ```
@@ -175,6 +181,15 @@ let age = 10;
   <img src="./assets/lego.png"dayCakeImage} alt={altText} />
   <p>Happy {age}th birthday!</p>
 </div>;
+
+code to HTML
+*
+<div class="wrapper">
+  <img src="/images/cake.jpg" alt= "Photo of fancy birthday cake" />
+  <p>Happy 10th birthday!</p>
+</div>;
+
+*
 ```
 
 ---
@@ -186,16 +201,21 @@ let agreeToTerms = false;
 
 <div>
   <label htmlFor="terms-of-service">
-    <input type="checkbox" id="terms-of-service" />I agree
-    to the terms
+    <input type="checkbox" id="terms-of-service" />I agree to the terms
   </label>
 
-  {agreeToTerms && (
-    <div>
-      YOUR SOUL BELONGS TO ME MWAHAHAHAHAAAAAAHHHHHH!!!
-    </div>
-  )}
+  {agreeToTerms && <div>YOUR SOUL BELONGS TO ME MWAHAHAHAHAAAAAAHHHHHH!!!</div>}
 </div>;
+
+code to HTML
+*
+<div>
+  <label for="terms-of-service">
+    <input type="checkbox" id="terms-of-service" />I agree to the terms
+  </label>
+</div>;
+*
+
 ```
 
 ---
@@ -205,16 +225,16 @@ Convert:
 ```jsx
 const pets = [
   {
-    name: 'Bark Obama',
+    name: "Bark Obama",
     age: 3,
-    species: 'dog',
-    breed: 'Labradoodle',
+    species: "dog",
+    breed: "Labradoodle",
   },
   {
-    name: 'Chairman Meow',
+    name: "Chairman Meow",
     age: 8,
-    species: 'cat',
-    breed: 'ragdoll',
+    species: "cat",
+    breed: "ragdoll",
   },
 ];
 
@@ -264,6 +284,70 @@ const pets = [
 </div>;
 ```
 
+to HTML \*
+
+const pets = [
+{
+name: "Bark Obama",
+age: 3,
+species: "dog",
+breed: "Labradoodle",
+},
+{
+name: "Chairman Meow",
+age: 8,
+species: "cat",
+breed: "ragdoll",
+},
+];
+
+<div>
+  <h1 class="title">My pets:</h1>
+  <ul>
+    <li>
+      <h2>Bark Obama</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>3</th>
+            <th>dog</th>
+            <th>Labradoodle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>dog</td>
+            <td>Labradoodle</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+
+    <li>
+      <h2>Chairman Meow</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>8</th>
+            <th>cat</th>
+            <th>ragdoll</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8</td>
+            <td>cat</td>
+            <td>ragdoll</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+
+  </ul>
+</div>;
+*
+
 ---
 
 # Rendering
@@ -279,10 +363,7 @@ const pets = [
 
 ```jsx
 // app.js
-ReactDOM.render(
-  <div>Hello world</div>,
-  document.querySelector('#root')
-);
+ReactDOM.render(<div>Hello world</div>, document.querySelector("#root"));
 ```
 
 ---
@@ -290,7 +371,7 @@ ReactDOM.render(
 # React vs ReactDOM
 
 - React is platform-independent
-- ReactDOM is all the code specific for web (as opposed to, for example, React Native).
+- ReactDOM is all the code specific for web (as opposed to, for example, React Native). = only one of this in application
 
 ---
 
@@ -303,6 +384,7 @@ ReactDOM.render(
   </head>
   <body>
     <noscript>This page requires Javascript</noscript>
+    <!-- no script disable JS, it show the user a message in case theirs no JS -->
     <div id="root"></div>
   <body>
 </html>

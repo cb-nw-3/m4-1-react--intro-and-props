@@ -92,16 +92,28 @@ Make the components reusable by using props.
 function VideoPlayer(props) {
   return (
     <div>
-      <video
-        src="http://youtube.com/some-video"
-        width={480}
-        height={300}
-      />
+      <video src="http://youtube.com/some-video" width={480} height={300} />
       <p>Cat playing the piano!!</p>
     </div>
   );
 }
 ```
+
+answer
+
+function VideoPlayer({src, width, height, caption}) {
+return (
+
+<div>
+<video
+        src= {src}
+        width={width}
+        height={height}
+      />
+<p>{caption}</p>
+</div>
+);
+}
 
 ---
 
@@ -129,6 +141,31 @@ function Tweet(props) {
 }
 ```
 
+answer
+
+function Tweet({displayName, handle, date}) {
+return (
+
+<div>
+<Avatar src={avartarSrc} />
+<div>
+<p>
+<span className="display-name">{displayName}</span>
+<span className="handle">@{handle}</span>
+<span className="date">{date}</span>
+</p>
+<p>{content}</p>
+<div>
+<button>Reply</button>
+<button>Retweet</button>
+<button>Like</button>
+<button>Share</button>
+</div>
+</div>
+</div>
+);
+}
+
 ---
 
 ```jsx
@@ -145,6 +182,20 @@ function Header(props) {
 }
 ```
 
+answer do not change anything
+function Header(props) {
+return (
+
+<header>
+<h1>My great website</h1>
+<nav>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+</nav>
+</header>
+);
+}
+
 ---
 
 ### Mapping over items
@@ -153,9 +204,9 @@ Say we have some data:
 
 ```js
 const storeItems = [
-  { id: 'a', price: 19.99, name: 'Monocle' },
-  { id: 'b', price: 209.99, name: 'Cane' },
-  { id: 'c', price: 44.99, name: 'Top Hat' },
+  { id: "a", price: 19.99, name: "Monocle" },
+  { id: "b", price: 209.99, name: "Cane" },
+  { id: "c", price: 44.99, name: "Top Hat" },
 ];
 ```
 
@@ -195,7 +246,7 @@ function StoreItem(props) {
     <li className="item">
       <h3>{props.name}</h3>
       <p>Price: ${props.price}</p>
-      <button>Add to cart</button>
+      <button>Add to cart</button> *button dosent really change*
     </li>
   );
 }
@@ -207,9 +258,9 @@ Next, **map over our data**, using the component once per item:
 
 ```jsx
 const storeItems = [
-  { id: 'a', price: 19.99, name: 'Monocle' },
-  { id: 'b', price: 209.99, name: 'Cane' },
-  { id: 'c', price: 44.99, name: 'Top Hat' },
+  { id: "a", price: 19.99, name: "Monocle" },
+  { id: "b", price: 209.99, name: "Cane" },
+  { id: "c", price: 44.99, name: "Top Hat" },
 ];
 
 function App(props) {
