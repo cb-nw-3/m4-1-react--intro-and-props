@@ -175,6 +175,13 @@ let age = 10;
   <img src="./assets/lego.png"dayCakeImage} alt={altText} />
   <p>Happy {age}th birthday!</p>
 </div>;
+
+//SOLUTION
+
+<div class="wrapper">
+  <img src=""/images/cake.jpg" alt="photo of fancy birthday cake"/>
+  <p>Happy 10th birthday!</p>
+</div>
 ```
 
 ---
@@ -196,6 +203,16 @@ let agreeToTerms = false;
     </div>
   )}
 </div>;
+
+// SOLUTION
+
+// agreeToTerms is false so the second div is not showing
+<div>
+  <label for="terms-of-service">
+    <input type="checkbox" id="temrs-of-service" />
+      I agree to the terms
+  </label>
+</div>
 ```
 
 ---
@@ -262,6 +279,54 @@ const pets = [
     </li>
   </ul>
 </div>;
+
+//SOLUTION
+
+<div>
+  <h1 class="title">My pets:</h1>
+  <ul>
+    <li>
+      <h2>Bark Obama</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>Species</th>
+            <th>Breed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>Dog</td>
+            <td>Labradoodle</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+
+    <li>
+      <h2>Chairman Meow</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>Species</th>
+            <th>Breed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8</td>
+            <td>Cat</td>
+            <td>Ragdoll</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>;
+
 ```
 
 ---

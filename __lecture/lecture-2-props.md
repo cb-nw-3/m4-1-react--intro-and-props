@@ -93,14 +93,22 @@ function VideoPlayer(props) {
   return (
     <div>
       <video
-        src="http://youtube.com/some-video"
-        width={480}
-        height={300}
+        src={videoSource}
+        width={width}
+        height={heigth}
       />
       <p>Cat playing the piano!!</p>
     </div>
   );
 }
+
+// SOLUTION
+
+<VideoPlayer 
+videoSource="http://www.youtube.com/qwerty" 
+width={400} 
+height={500}
+/>
 ```
 
 ---
@@ -109,14 +117,14 @@ function VideoPlayer(props) {
 function Tweet(props) {
   return (
     <div>
-      <Avatar src="/images/bunny.jpg" />
+      <Avatar src="{src}" />
       <div>
         <p>
-          <span className="user-name">Mr. Bunny</span>
-          <span className="handle">@mr-bunny</span>
-          <span className="date">Oct 29th</span>
+          <span className="user-name">{username}</span>
+          <span className="handle">@{handle}</span>
+          <span className="date">{date}</span>
         </p>
-        <p>Alfalfa is the best food don't @ me</p>
+        <p>{content}</p>
         <div>
           <button>Reply</button>
           <button>Retweet</button>
@@ -127,6 +135,16 @@ function Tweet(props) {
     </div>
   );
 }
+
+// SOLUTION
+
+// <Tweet
+//   src="/images/bunny.jpg"
+//   content="Alfalfa is the best food don't @ me"
+//   username="Mr. Bunny"
+//   handle="mr-bunny"
+//   date="Oct 29th"
+// />
 ```
 
 ---
@@ -143,6 +161,10 @@ function Header(props) {
     </header>
   );
 }
+
+// SOLUTION
+// It would have to change if the header changes for each page
+// we visit
 ```
 
 ---
