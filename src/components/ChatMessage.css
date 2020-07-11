@@ -1,0 +1,27 @@
+.chatWrapper{
+    margin-top: 15px;
+    display: flex;
+    padding: 10px;
+    position: relative;
+}
+
+.bodyWrapper{
+    padding-left: 65px;
+}
+.avatar{
+    position: absolute;
+    border-radius: 50%;
+    height: 35px;
+    bottom: 0;
+}
+
+.name{
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.chat-message{
+    background-color: lightgray;
+    border-radius: 7px; 
+    padding: 10px 15px;
+}
