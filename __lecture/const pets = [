@@ -1,0 +1,135 @@
+const pets = [
+  {
+    name: 'Bark Obama',
+    age: 3,
+    species: 'dog',
+    breed: 'Labradoodle',
+  },
+  {
+    name: 'Chairman Meow',
+    age: 8,
+    species: 'cat',
+    breed: 'ragdoll',
+  },
+];
+
+
+<div>
+  <h1 className="title">My pets:</h1>
+  <ul>
+    <li>
+      <h2>{Bark Obama</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>Species</th>
+            <th>Breed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>dog</td>
+            <td>Labradoodle</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>
+      <h2>Chairman Meow</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>Species</th>
+            <th>Breed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8</td>
+            <td>cat</td>
+            <td>ragdoll</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>;
+
+
+
+
+function Tweet(props) {
+  return (
+    <div>
+      <Avatar src="/images/bunny.jpg" />
+      <div>
+        <p>
+          <span className="user-name">Mr. Bunny</span>
+          <span className="handle">@mr-bunny</span>
+          <span className="date">Oct 29th</span>
+        </p>
+        <p>Alfalfa is the best food don't @ me</p>
+        <div>
+          <button>Reply</button>
+          <button>Retweet</button>
+          <button>Like</button>
+          <button>Share</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+function Tweet({user-name, handle, date, avatar-src, content}) {
+  return (
+    <div>
+      <Avatar src={avatar-src>
+      <div>
+        <p>
+          <span className="user-name">{user-name}</span>
+          <span className="handle">{handle}</span>
+          <span className="date"{date}</span>
+        </p>
+        <p>{content}</p>
+        <div>
+          <button>Reply</button>
+          <button>Retweet</button>
+          <button>Like</button>
+          <button>Share</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+so the buttons shouldn't be props because every tweet shoul dhave the same buttons
+
+
+function Header({props}) {
+  return (
+    <header>
+      <h1>My great website</h1>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+  );
+}
+
+function Header({about_text, about_link, contact_link, contact_text }) {
+  return (
+    <header>
+      <h1>My great website</h1>
+      <nav>
+        <a href="{about_link}">{about_text}</a>
+        <a href="{contact_link}">{contact_text}</a>
+      </nav>
+    </header>
+  );
+}
