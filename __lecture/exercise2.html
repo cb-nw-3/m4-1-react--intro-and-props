@@ -1,0 +1,35 @@
+function Tweet({source, name, id, date, message }) {
+    return (
+      <div>
+        <Avatar src={source} />
+        <div>
+          <p>
+            <span className="user-name">{name}</span>
+            <span className="handle">@{id}</span>
+            <span className="date">{date}</span>
+          </p>
+          <p>{message}</p>
+          <div>
+            <button>Reply</button>
+            <button>Retweet</button>
+            <button>Like</button>
+            <button>Share</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+
+
+  function Header({title, about, contact}) {
+    return (
+      <header>
+        <h1>{title}</h1>
+        <nav>
+          <a href="{about}">About</a>
+          <a href="{contact}">Contact</a>
+        </nav>
+      </header>
+    );
+  }
