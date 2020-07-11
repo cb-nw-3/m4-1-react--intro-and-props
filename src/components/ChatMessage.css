@@ -1,0 +1,24 @@
+.chat-message{
+    display:flex;
+    margin-top: 25px;
+}
+.chat-avatar{
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    margin-top: 20px;
+}
+.chat-container{
+    margin-left: 5px;
+    
+}
+.chat-username{
+    margin-bottom: 5px;
+    font-size: 0.90em;
+}
+.chat-body{
+    background: #e0e0e0fb;
+    padding: 10px;
+    border-radius: 10px;
+
+}
