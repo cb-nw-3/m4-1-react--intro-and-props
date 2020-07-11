@@ -17,8 +17,7 @@ function ChatStream(props) {
     <section className="chat-stream">
       {
         props.messages.map(message => {
-          // return <div>{message.body}</div>; // this works
-          return <ChatMessage message={message} />  // this does not
+          return <ChatMessage message={message} />
         })
       }
     </section>
