@@ -2,15 +2,14 @@ import React from 'react';
 
 import './HeaderAvatar.css';
 
-function HeaderAvatar({ users, currentUser }) {
-    
-    users.forEach(element => {
-       if (element.username !== currentUser.username)
-       {
-           
-       } 
-    });
-    // console.log(users, currentUser);
+function HeaderAvatar({ user }) {
+        return (
+            <div className ="individual-avatar">
+                {user.username}
+                    <img className="avatar-image" src={user.avatar} alt="talking head"></img>
+                        </div>
+                        
+        );
 
 }
 
