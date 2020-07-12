@@ -11,7 +11,7 @@
 }
 .chat-container{
     margin-left: 5px;
-    
+    display:inline;
 }
 .chat-username{
     margin-bottom: 5px;
@@ -40,4 +40,14 @@
 }
 .no-name{
     color:white;
+}
+.tip-sent{
+    display:block;
+    float: right;
+    transform:rotate(0deg) translate(10px, -20px);
+}
+.tip-received{
+    display:block;
+    float:left;
+    transform:rotate(0deg) translate(-10px,-20px);
 }
