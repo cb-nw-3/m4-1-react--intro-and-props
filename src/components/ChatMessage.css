@@ -22,7 +22,6 @@
     color: #000;
     padding: 10px;
     border-radius: 10px;
-
 }
 .blue{
     background: #1185f7;
@@ -32,7 +31,6 @@
 }
 .right{
     margin-left: auto;
-    
 }
 .no-avatar{
     width:0;
