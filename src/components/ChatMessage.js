@@ -7,9 +7,11 @@ function ChatMessage(props) {
 
   return (
     <div className="chat-message">
-      <img src={props.message.user.avatar}></img>
-      <div>{props.message.user.username}</div>
-      <div>{props.message.body}</div>
+      <img className="user-avatar" src={props.message.user.avatar}></img>
+      <div className="text">
+        <div className="user-username">{props.message.user.username}</div>
+        <div className="user-message">{props.message.body}</div>
+      </div>
     </div>
   );
 }

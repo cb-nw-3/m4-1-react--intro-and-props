@@ -1,0 +1,25 @@
+div.chat-message {
+  display: flex;
+  /* border: 1px solid green; */
+  margin-top: 15px;
+}
+
+div.text {
+}
+
+img.user-avatar {
+  width: 25px;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+div.user-username {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+div.user-message {
+  padding: 8px;
+  background-color: #e9e9eb;
+  border-radius: 10px;
+}
