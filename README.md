@@ -82,8 +82,8 @@ If we check `src/index.js`, we find the "top" of the React tree:
 
 ```jsx
 ReactDOM.render(
-  <App currentUser={data.currentUser} conversation={data.conversation} />,
-  rootElement
+	<App currentUser={data.currentUser} conversation={data.conversation} />,
+	rootElement
 );
 ```
 
@@ -102,9 +102,9 @@ Our `App` component, in `src/components/App.js`, renders the following:
 
 ```jsx
 <div className="wrapper">
-  <Header />
-  <ChatStream />
-  <Footer />
+	<Header />
+	<ChatStream />
+	<Footer />
 </div>
 ```
 
@@ -112,10 +112,10 @@ We can also see that we import an `App.css`, which adds a bit of styling:
 
 ```css
 .wrapper {
-  font-family: sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	font-family: sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 ```
 
@@ -154,12 +154,12 @@ In our `src/data.js` file, we see that the `messages` array takes this shape:
 
 ```js
 [
-  {
-    user: users.elaine,
-    body: 'How about you bring me back something?',
-    timestamp: '11:38',
-  },
-  /* ...lots more like this */
+	{
+		user: users.elaine,
+		body: "How about you bring me back something?",
+		timestamp: "11:38",
+	},
+	/* ...lots more like this */
 ];
 ```
 
@@ -195,11 +195,11 @@ We can solve this by mapping over the `messages` prop we provided to `ChatStream
 
 ```js
 return (
-  <section className="chat-stream">
-    {props.messages.map(message => {
-      return <div>{message.body}</div>;
-    })}
-  </section>
+	<section className="chat-stream">
+		{props.messages.map((message) => {
+			return <div>{message.body}</div>;
+		})}
+	</section>
 );
 ```
 
@@ -241,12 +241,12 @@ Create two new files, `src/ChatMessage.js` and `src/ChatMessage.css`. Write the 
 > **Please no copy/paste!** You'll write _a lot_ of new components over this module. It's worth taking the time to get used to writing them out.
 
 ```js
-import React from 'react';
+import React from "react";
 
-import './ChatMessage.css';
+import "./ChatMessage.css";
 
 function ChatMessage(props) {
-  return <div className="chat-message"></div>;
+	return <div className="chat-message"></div>;
 }
 
 export default ChatMessage;
@@ -261,9 +261,9 @@ Inside `ChatStream`, we're mapping through each message in the array. Pass that 
 ```jsx
 // Inside `ChatStream`
 {
-  props.messages.map(message => {
-    return <ChatMessage message={message} />;
-  });
+	props.messages.map((message) => {
+		return <ChatMessage message={message} />;
+	});
 }
 ```
 
@@ -356,10 +356,11 @@ function ChatStream(props) {
       {props.messages.map(message => {
 +       let messageType;
 +       if (message.user === props.currentUser) {
-+         messageType === 'sent';
++         messageType = 'sent';
 +       } else {
-+         messageType === 'received';
++         messageType = 'received';
 +       }
+
 +
 -        return <ChatMessage user={message.user} body={message.body} />;
 +        return (
@@ -411,11 +412,11 @@ Here's our new `ChatMessage` component:
 
 ```jsx
 function ChatMessage(props) {
-  if (props.messageType === 'sent') {
-    return <SentMessage message={props.message} />;
-  } else {
-    return <ReceivedMessage message={props.message} />;
-  }
+	if (props.messageType === "sent") {
+		return <SentMessage message={props.message} />;
+	} else {
+		return <ReceivedMessage message={props.message} />;
+	}
 }
 ```
 

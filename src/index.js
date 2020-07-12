@@ -7,7 +7,7 @@ import App from './components/App';
 import './styles.css';
 
 const rootElement = document.getElementById('root');
-
+console.log(data)
 ReactDOM.render(
   <App currentUser={data.currentUser} conversation={data.conversation} />,
   rootElement
