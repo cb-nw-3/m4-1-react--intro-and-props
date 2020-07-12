@@ -3,7 +3,7 @@ import React from 'react';
 import './ChatMessage.css';
 
 function ChatMessage(props) {
-    console.log(props);
+    // console.log(props);
     let chatBodyClass;
     let chatAvatarClass;
     let chatContainerClass;

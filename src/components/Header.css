@@ -1,4 +1,7 @@
 header {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   height: 100px;
   background-color: #f9f9f9;
   /* 
@@ -7,4 +10,15 @@ header {
   */
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15),
     0px 1px 0.5px rgba(0, 0, 0, 0.075);
+}
+.header-container{
+  margin: 0px 5px;
+}
+.header-avatar{
+  border-radius: 50%;
+  width: 40px;
+  height:40px;
+}
+.header-username{
+  font-size: 0.9em;
 }
