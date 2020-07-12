@@ -1,0 +1,23 @@
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.chat-message > img {
+  width: 40px;
+  border-radius: 50%;
+}
+.nameAndMessage {
+  margin: 0 10px;
+}
+
+.message {
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.name {
+  font-size: 0.8em;
+}

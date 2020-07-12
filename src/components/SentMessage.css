@@ -1,0 +1,17 @@
+.chat-message-sent {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+  flex-direction: row-reverse;
+}
+
+.nameAndMessage-sent {
+  margin: 0 10px;
+}
+
+.message-sent {
+  background: rgb(34, 19, 248);
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: white;
+}
