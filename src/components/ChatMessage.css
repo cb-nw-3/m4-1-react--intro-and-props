@@ -1,0 +1,51 @@
+.chat-message{
+    display:flex;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.chat-avatar{
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    margin-top: 20px;
+}
+.chat-container{
+    margin-left: 5px;
+    display:inline;
+}
+.chat-username{
+    margin-bottom: 5px;
+    font-size: 0.90em;
+}
+.chat-body{
+    background: #e9e9eb;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+.blue{
+    background: #1185f7;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.right{
+    margin-left: auto;
+}
+.no-avatar{
+    width:0;
+    height:0;
+}
+.no-name{
+    color:white;
+}
+.tip-sent{
+    display:block;
+    float: right;
+    transform:rotate(0deg) translate(10px, -20px);
+}
+.tip-received{
+    display:block;
+    float:left;
+    transform:rotate(0deg) translate(-10px,-20px);
+}
