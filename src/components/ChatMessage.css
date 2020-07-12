@@ -1,18 +1,27 @@
-.chatWrapper{
+.chatWrapperReceived{
     margin-top: 15px;
     display: flex;
     padding: 10px;
     position: relative;
 }
 
-.bodyWrapper{
-    padding-left: 65px;
+.chatWrapperSent{
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end ;
+    
 }
+
+.bodyWrapper{
+    padding-left: 25px;
+}
+
 .avatar{
-    position: absolute;
+    margin-top: 15px;
     border-radius: 50%;
     height: 35px;
-    bottom: 0;
 }
 
 .name{
@@ -22,6 +31,13 @@
 
 .chat-message{
     background-color: lightgray;
+    border-radius: 7px; 
+    padding: 10px 15px;
+}
+
+.chat-message-sent{
+    background-color: #3C99DC;
+    color: white; 
     border-radius: 7px; 
     padding: 10px 15px;
 }
