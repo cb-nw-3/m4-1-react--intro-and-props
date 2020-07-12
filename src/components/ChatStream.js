@@ -14,7 +14,8 @@ function ChatStream(props) {
     return (
         <section className="chat-stream">
             {props.messages.map(message => {
-                return <div>{message.body}</div>;
+                // Fix console error 'key': https://reactjs.org/docs/lists-and-keys.html#keys
+                return <div key={message.id}>{message.body}</div>;
             })}
         </section>
     );
