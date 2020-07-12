@@ -1,8 +1,20 @@
-footer {
+/*footer {
   /* 
     These two lines replicate the "blurry white background"
     effect, as seen in iMessage
-  */
+  
+  
+  
+}*/
+
+.text-box{
   backdrop-filter: blur(40px);
   background-color: rgba(255, 255, 255, 0.4);
+  position:fixed;
+  bottom: 0;
+  padding: 10px 200px;
+}
+.text-input{
+  border-radius: 10px;
+  border: 1px solid #d1d1d1de;
 }
