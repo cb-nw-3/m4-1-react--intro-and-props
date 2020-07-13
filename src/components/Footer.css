@@ -5,4 +5,37 @@ footer {
   */
   backdrop-filter: blur(40px);
   background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.message-box {
+  border-radius: 15px;
+  border: 1px solid gray;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+.send-message{
+  font-size: 16px;
+  border-radius: 15px;
+  margin-left: 5px;
+  outline: none;
+  padding: 8px;
+  border: 2px solid gray;
+  box-shadow: 2px 2px 5px grey;
+  background: #06a94d;
+  color: #fff;
+  font-weight: 600;
+}
+
+.send-message:hover{
+  background: linear-gradient(45deg, #000, #059142 30%);
+  box-shadow: 2px 2px 5px black
 }
