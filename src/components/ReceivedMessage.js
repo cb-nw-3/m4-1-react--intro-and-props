@@ -2,7 +2,6 @@ import React from "react";
 import "./ChatMessage.css";
 
 const ReceivedMessage = (props) => {
-  console.log(props);
   return (
     <div>
       <div className="message-wrapper">
