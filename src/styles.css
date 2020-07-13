@@ -8,3 +8,7 @@ body {
 *:after {
   box-sizing: border-box;
 }
+
+.main-div {
+  display: flex;
+}
