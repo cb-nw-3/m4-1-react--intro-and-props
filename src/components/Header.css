@@ -13,8 +13,25 @@ header {
   padding: 0 40%;
 }
 
+.avatarWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 95%;
+  flex: 1;
+}
+
 .headerAvatar {
-  height: 80%;
-  border-radius: 50px;
+  width: 70%;
+  border-radius: 50%;
   border: 2px solid black;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
 }

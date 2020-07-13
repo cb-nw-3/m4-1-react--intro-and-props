@@ -18,7 +18,12 @@ function Header(props) {
 
   return (
     <header>
-      {otherUsers.map(user => {return (<img src= {user.avatar} alt="avatar" className="headerAvatar"></img>)})}
+      {otherUsers.map(user => {return (
+        <div className = "avatarWrapper">
+          <img src= {user.avatar} alt="avatar" className="headerAvatar"></img>
+          <h2>{user.username}</h2>
+        </div>
+      )})}
     </header>
     );
 }
