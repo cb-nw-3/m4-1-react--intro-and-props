@@ -14,7 +14,6 @@
 }
 
 .bodyWrapper {
-  padding-left: 25px;
   display: flex;
 }
 
@@ -26,13 +25,14 @@
 }
 
 .name {
+  margin-left: 12px;
   font-size: 0.9rem;
   font-style: italic;
 }
 
 .chat-message {
   position: relative;
-  background-color: lightgray;
+  background-color: #e9e9eb;
   border-radius: 7px;
   padding: 10px 15px;
 }
@@ -44,7 +44,18 @@
   padding: 10px 15px;
 }
 
-.tail {
+.tail-sent {
   position: relative;
   left: -4.7px;
+}
+
+.tail-received {
+  position: relative;
+  right: -1.5px;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }

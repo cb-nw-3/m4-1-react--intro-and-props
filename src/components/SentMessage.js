@@ -6,7 +6,7 @@ function SentMessage(props) {
         <div className='chatWrapperSent'>
           <div className="bodyWrapper">
             <div className="chat-message-sent" >{props.message.body}</div>
-            <img className= "tail" src="./assets/tip-sent.svg"></img>
+            <img className= "tail-sent" src="./assets/tip-sent.svg"></img>
           </div>
         </div>)
 }
