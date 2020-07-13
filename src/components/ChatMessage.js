@@ -15,7 +15,6 @@ function SentMessage(props) {
 }
 
 function ReceivedMessage(props) {
-    console.log('ReceivedMessage: ', props);
     return (
         <>
             <div className="userName">{props.message.user.username}</div>
@@ -29,7 +28,7 @@ function ReceivedMessage(props) {
 }
 
 function ChatMessage(props) {
-    console.log(props.user.avatar);
+    // console.log(props.user.avatar);
     if (props.messageType === 'sent') {
         return <SentMessage message={props} />;
     } else {
