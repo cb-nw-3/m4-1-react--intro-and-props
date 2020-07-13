@@ -48,3 +48,13 @@
   display: flex;
   justify-content: flex-end;
 }
+.sentTick {
+  position: relative;
+  right: 0.5%;
+  top: 3vh;
+}
+.receivedTick {
+  position: relative;
+  left: 0.5%;
+  top: 3vh;
+}

@@ -7,11 +7,13 @@ import "./ChatMessage.css";
 const ChatMessage = (props) => {
   if (props.messageType === "received") {
     return (
-      <ReceivedMessage
-        message={props.message}
-        user={props.user}
-        avatar={props.avatar}
-      />
+      <div>
+        <ReceivedMessage
+          message={props.message}
+          user={props.user}
+          avatar={props.avatar}
+        />
+      </div>
     );
   } else {
     return <SentMessage message={props.message} />;

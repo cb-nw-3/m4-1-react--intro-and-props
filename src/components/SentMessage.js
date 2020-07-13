@@ -5,6 +5,7 @@ const SentMessage = (props) => {
   return (
     <div className="sent-wrapper">
       <div className="sent-message">{props.message}</div>
+      <img className="sentTick" src="/assets/tip-sent.svg" />
     </div>
   );
 };
