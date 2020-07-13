@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+.header-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-avatar-name {
+  margin: 0;
+}
