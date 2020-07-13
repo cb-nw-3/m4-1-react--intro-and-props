@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ReceivedMessage(props) {
-console.log(props);
+// console.log(props);
 // return{
 //   <div>Received</div>
 // }  
@@ -12,7 +12,7 @@ return (
     <div className="messageWrapper">
       <div className="name">{props.message.user.username}</div>
       <div className="bodyWrapper">
-        <img className= "tail-received" src="./assets/tip-received.svg"></img>
+        <img className= "tail-received" alt="tip" src="./assets/tip-received.svg"></img>
         <div className="chat-message" >{props.message.body}</div>
       </div>
     </div>
