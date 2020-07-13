@@ -15,7 +15,9 @@ function ChatStream(props) {
   return (
     <section className="chat-stream">
       {props.messages.map((message) => {
-        return <ChatMessage message={message} />;
+        return (
+          <ChatMessage message={message} currentUser={props.currentUser} />
+        );
       })}
     </section>
   );

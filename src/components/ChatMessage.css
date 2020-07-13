@@ -1,25 +1,56 @@
 div.chat-message {
   display: flex;
-  /* border: 1px solid green; */
-  margin-top: 15px;
+}
+
+div.current-user-chat-message {
+  display: flex;
+  justify-content: space-between;
 }
 
 div.text {
+  display: flex;
+  flex-direction: column;
 }
 
 img.user-avatar {
   width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin: 15px;
+  margin: 38px 15px 0 15px;
 }
 
 div.user-username {
-  font-size: 12px;
-  margin-bottom: 5px;
+  font-size: 8px;
+}
+
+div.current-user-username {
+  font-size: 4px;
+  visibility: hidden;
 }
 
 div.user-message {
-  padding: 8px;
+  font-size: 12px;
+  padding: 0 8px;
   background-color: #e9e9eb;
   border-radius: 10px;
+}
+
+div.current-user-message {
+  font-size: 12px;
+  padding: 0 8px;
+  background-color: #44aaec;
+  color: #fff;
+  border-radius: 10px;
+}
+
+div.current-user-message-text {
+  font-size: 12px;
+}
+
+img.current-user-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 15px;
+  visibility: hidden;
 }
