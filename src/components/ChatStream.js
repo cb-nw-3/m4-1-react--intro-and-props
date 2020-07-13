@@ -13,10 +13,21 @@ import './ChatStream.css';
 // - a background color of #e9e9eb
 
 function ChatStream(props) {
+  console.log('ChatStream', props)
   return (
     <section className="chat-stream">
-      {props.messages.map(element => {
-        return <ChatMessage message={element} />
+      {props.messages.map(message => {
+        let messageType;
+        if (props.currentUser === message.user) {
+          messageType = 'sent';
+        } else {
+          messageType = 'received';
+        }
+        return <ChatMessage 
+          user={message.user}
+          body={message.body}
+          messageType={messageType} 
+        />
       })}
     </section>
     );
