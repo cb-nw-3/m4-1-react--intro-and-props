@@ -9,5 +9,6 @@
 */
 .chat-stream {
   flex: 1;
-  width: 25vw
+  width: 25vw;
+  margin-top: 95px;
 }
