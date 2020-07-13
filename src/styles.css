@@ -8,3 +8,13 @@ body {
 *:after {
   box-sizing: border-box;
 }
+
+.wrapperAll {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapperAll > div {
+  flex: 1;
+}
