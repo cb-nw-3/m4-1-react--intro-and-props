@@ -7,8 +7,14 @@
   - a text color of #000
   - a background color of #e9e9eb
 */
+
+@import url('//db.onlinewebfonts.com/c/5ab304ade0d4f62d027d12464ca69443?family=Apple + Color + Emoji');
+
 .chat-stream {
   flex: 1;
   width: 25vw;
-  margin-top: 95px;
+  /* margin-top: 95px;  */
+  font-family: apple color emoji, segoe ui emoji, noto color emoji,
+    android emoji, emojisymbols, emojione mozilla, twemoji mozilla,
+    segoe ui symbol;
 }
