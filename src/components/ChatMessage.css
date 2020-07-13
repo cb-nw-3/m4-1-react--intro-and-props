@@ -50,8 +50,8 @@
 }
 .sentTick {
   position: relative;
-  right: 0.5%;
-  top: 3vh;
+  right: 1%;
+  top: 2.5vh;
 }
 .receivedTick {
   position: relative;
