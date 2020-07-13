@@ -2,11 +2,19 @@ body {
   font-family: sans-serif;
   color: black;
   padding: 20px;
+  max-width: 400px;
 }
 
-.container {
+.container-sent {
   padding: 0;
   margin: 0 10px 0;
+  text-align: start;
+}
+
+.container-received {
+  padding: 0;
+  margin: 0 10px 0;
+  text-align: end;
 }
 
 .container-image {
@@ -29,16 +37,27 @@ img {
 
 .chat-username {
   font-size: 12px;
+  color: #909090; 
   margin: 10px;
   padding: 4px;
   margin-bottom: 0;
   padding-bottom: 4;
 }
 
-.chat-message {
+.chat-message-sent {
   font-size: 14px;
+  color: #000;
+  background: #e9e9eb;
   margin: 0px 10px 6px;
   padding: 6px;
-  background: #F0F0F0;
+  border-radius: 10px;
+}
+
+.chat-message-received {
+  font-size: 14px;
+  color: #FFF;
+  background: #1185f7;
+  margin: 0px 10px 6px;
+  padding: 6px;
   border-radius: 10px;
 }
