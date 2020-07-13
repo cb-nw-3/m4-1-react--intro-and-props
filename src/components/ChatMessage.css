@@ -1,6 +1,11 @@
 .chat-message {
   display: flex;
   padding: 5px;
+  /* justify-content: flex-end; */
+}
+
+.chat-message--sent {
+  justify-content: flex-end;
 }
 
 .chat-message img {
@@ -18,8 +23,6 @@
 
 
 .chat-message__content p {
-  color: #000;
-  background-color: #e9e9eb;
   padding: 12px;
   border-radius: 15px;
   margin: 0;
@@ -27,8 +30,18 @@
 }
 
 .chat-message__content h1 {
-  color: #000;
   font-size: 0.9rem;
   margin: 0;
   padding: 5px;
 }
+
+.chat-message__content--recvd p {
+  color: #000;
+  background-color: #e9e9eb;
+}
+
+.chat-message__content--sent p {
+  color: #fff;
+  background-color: #1185f7;
+}
+

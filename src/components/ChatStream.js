@@ -14,11 +14,21 @@ import ChatMessage from './ChatMessage';
 function ChatStream(props) {
   return (
     <section className="chat-stream">
-        {
-          props.messages.map(message => {
-            return <ChatMessage message={message} />;
-          })
+      {props.messages.map(message => {
+        let messageType;
+        if(message.user === props.currentUser) {
+          messageType = 'sent';
+        } else {
+          messageType = 'received';
         }
+
+        return (
+          <ChatMessage
+            message={message}
+            messageType={messageType}
+          />
+        )
+      })}
     </section>
   );
 }
