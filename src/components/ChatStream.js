@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ChatMessage from './ChatMessage';
+
 import './ChatStream.css';
 
 // The current user's messages should have:
@@ -15,7 +17,7 @@ function ChatStream(props) {
         <section className="chat-stream">
             {props.messages.map(message => {
                 // Fix console error 'key': https://reactjs.org/docs/lists-and-keys.html#keys
-                return <div key={message.id}>{message.body}</div>;
+                return <ChatMessage key={message.id} message={message} />;
             })}
         </section>
     );
