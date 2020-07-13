@@ -25,6 +25,7 @@ function MessageSent(props) {
   return <div className="chat-message-sent">
     <img src={props.messages.user.avatar} />
     <div className="message-body">
+      <img className="tip-sent" src="/assets/tip-sent.svg" />
       <p className="message-sent">{props.messages.body}</p>
     </div>
   </div>;
@@ -37,7 +38,10 @@ function MessageReceived(props) {
     <img src={props.messages.user.avatar} />
     <div className="message-body">
       <p className="username">{props.messages.user.username}</p>
-      <p className="message-received">{props.messages.body}</p>
+      <div className="message-bubble">
+        <img className="tip-received" src="/assets/tip-received.svg" />
+        <p className="message-received">{props.messages.body}</p>
+      </div>
     </div>
   </div>;
 

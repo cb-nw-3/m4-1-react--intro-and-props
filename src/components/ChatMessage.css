@@ -4,7 +4,9 @@ img {
   border-radius: 50%;
   margin: 12px;
 }
-
+.message-body {
+  position: relative;
+}
 .chat-message-received {
   display: flex;
   align-items: flex-end;
@@ -13,6 +15,18 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
+}
+.tip-sent {
+  position: absolute;
+  right: -30px;
+  bottom: 0px;
+  z-index: -1;
+}
+.tip-received {
+  position: absolute;
+  left: -30px;
+  bottom: 0px;
+  z-index: -1;
 }
 .message-received {
   background: #e9e9eb;
