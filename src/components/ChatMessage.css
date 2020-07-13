@@ -1,0 +1,35 @@
+.received-message,
+.sent-message {
+  display: flex;
+  margin: 5px;
+}
+
+.received-message {
+  justify-content: flex-start;
+}
+
+.sent-message {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.received-message div img {
+  max-width: 50px;
+  border-radius: 25px;
+}
+
+.received-message div p,
+.sent-message div p {
+  margin: 2px 0 0 0;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.received-message div p {
+  background-color: #ccc;
+}
+
+.sent-message div p {
+  background-color: cornflowerblue;
+  color: #fff;
+}
