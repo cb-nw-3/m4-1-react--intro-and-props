@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ChatMessage from './ChatMessage'
+
 import './ChatStream.css';
 
 // The current user's messages should have:
@@ -11,7 +13,13 @@ import './ChatStream.css';
 // - a background color of #e9e9eb
 
 function ChatStream(props) {
-  return <section className="chat-stream">{/* Your code here! */}</section>;
+  return (
+    <section className="chat-stream">
+      {props.messages.map(element => {
+        return <ChatMessage message={element} />
+      })}
+    </section>
+    );
 }
 
 export default ChatStream;
