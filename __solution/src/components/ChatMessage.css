@@ -16,6 +16,7 @@
   background: #e9e9eb;
   font-size: 22px;
   margin: 0 10px;
+  z-index: 10;
 }
 
 .author {
