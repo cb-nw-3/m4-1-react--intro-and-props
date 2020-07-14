@@ -53,8 +53,8 @@
 
 .msg-tip {
   position: absolute;
-  right: -5px;
-  bottom: 15px;
+  right: -1px;
+  bottom: 18px;
   /* transform: rotate(0deg); */
 }
 
