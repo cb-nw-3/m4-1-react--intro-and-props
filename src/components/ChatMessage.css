@@ -1,6 +1,7 @@
 .chat-message {
   display: flex;
   padding: 5px;
+  position: relative;
   /* justify-content: flex-end; */
 }
 
@@ -18,15 +19,16 @@
 .chat-message__content {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 12px;
 }
 
 
 .chat-message__content p {
-  padding: 12px;
-  border-radius: 15px;
+  padding: 10px 20px;
+  border-radius: 14px;
   margin: 0;
   font-weight: bold;
+  /* font-size: 22px; */
 }
 
 .chat-message__content h1 {
@@ -45,3 +47,20 @@
   background-color: #1185f7;
 }
 
+.chat-message__content__inside {
+  position: relative;
+}
+
+.msg-tip {
+  position: absolute;
+  right: -5px;
+  bottom: 15px;
+  /* transform: rotate(0deg); */
+}
+
+.msg-tip--recvd {
+  position: absolute;
+  left: -18px;
+  bottom: 2px;
+  /* transform: rotate(0deg); */
+}
