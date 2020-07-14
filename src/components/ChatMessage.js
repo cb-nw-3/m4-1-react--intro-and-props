@@ -1,13 +1,26 @@
-import React from 'react';
+import React from "react";
+import Avatar from './Avatar.js'
 
-import './ChatMessage.css';
+import "./ChatMessage.css";
+
 
 function ChatMessage(props) {
-    console.log('test', props);
+    const user = props.user;
+    const body = props.body;
+    const messageType = props.messageType;
+
     return (
-    <div className="chat-message">
-        <span>{props.messages.user.username}</span>
-        <img src={props.messages.user.avatar} />
+    <div className={ messageType === 'sent' ? 'sent-message' : 'chat-message'}>
+        <span className="username">{user.username}</span>
+        <div class="sameLine">
+        <Avatar src={user.avatar} />
+    <div className="bubbleContainer">
+    <div className="message">
+        {body}
+        </div>
+        <img className="icon" src={ messageType === 'sent' ? '/assets/tip-sent.svg' : '/assets/tip-received.svg' } />
+        </div>
+    </div>
     </div>
     )
 }
