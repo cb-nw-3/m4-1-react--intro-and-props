@@ -11,7 +11,7 @@ function Header(props) {
         .filter((participant) => participant !== props.currentUser)
         .map((participant) => (
           <div key={participant.username} className="participant">
-            <Avatar user={participant.username} size={50} />
+            <Avatar user={participant} size={50} />
             <div className="participant-name">{participant.username}</div>
           </div>
         ))}
