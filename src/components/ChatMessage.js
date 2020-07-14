@@ -5,6 +5,7 @@ import ReceivedMessage from './ReceivedMessage';
 import SentMessage from './SentMessage';
 
 
+
 function ChatMessage(props) {
   if (props.messageType === 'sent') {
     return <SentMessage message={props} />;

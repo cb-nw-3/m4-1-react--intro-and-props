@@ -18,10 +18,10 @@ function Header(props) {
 
   return (
     <header>
-      {otherUsers.map(user => {return (
-        <div className = "avatarWrapper">
-          <img src= {user.avatar} alt="avatar" className="headerAvatar"></img>
-          <h2>{user.username}</h2>
+      {otherUsers.map((user, index) => {return (
+        <div key={'div'+index} className = 'avatarWrapper'>
+          <img key={'img'+index} src= {user.avatar} alt="avatar" className="headerAvatar"></img>
+          <h2 key={'h2'+index}>{user.username}</h2>
         </div>
       )})}
     </header>
