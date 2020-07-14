@@ -6,12 +6,19 @@
 }
 
 .nameAndMessage-sent {
+  position: relative;
   margin: 0 10px;
 }
 
 .message-sent {
-  background: rgb(34, 19, 248);
+  background: #1185f7;
   border-radius: 10px;
   padding: 10px 10px;
   color: white;
+}
+
+.sentTip {
+  position: absolute;
+  bottom: 0;
+  right: -8px;
 }

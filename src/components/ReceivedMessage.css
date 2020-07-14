@@ -10,10 +10,15 @@
 }
 .nameAndMessage {
   margin: 0 10px;
+  position: relative;
 }
-
+.receivedTip {
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+}
 .message {
-  background: rgb(240, 240, 240);
+  background: #e9e9eb;
   border-radius: 10px;
   padding: 10px 10px;
 }
