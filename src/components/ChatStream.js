@@ -24,6 +24,7 @@ function ChatStream(props) {
         }
         return (
           <ChatMessage
+            key={message.id}
             user={message.user}
             body={message.body}
             messageType={messageType}

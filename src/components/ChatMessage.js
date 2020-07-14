@@ -11,7 +11,7 @@ function SentMessage(props) {
     return (
         <div className="user-message sent">
             <div className="sent-message">{props.message.body}</div>
-            <img src={bubbleSent} role="presentation" class="bubble" />
+            <img src={bubbleSent} role="presentation" className="bubble" />
         </div>
     )
 }
@@ -22,7 +22,7 @@ function ReceivedMessage(props) {
             <div className="userName">{props.message.user.username}</div>
             <div className="user-message received">
                 <Avatar user={props.message.user} />
-                <img src={bubbleReceived} role="presentation" class="bubble" />
+                <img src={bubbleReceived} role="presentation" className="bubble" />
                 <div className="received-message">{props.message.body}</div>
             </div>
         </>

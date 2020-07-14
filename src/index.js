@@ -9,9 +9,15 @@ import './styles.css';
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-  <App
-    currentUser={data.currentUser}
-    conversation={data.conversation}
-  />,
+  <div style={{ display: `flex` }}>
+    < App
+      currentUser={data.conversation.participants[0]}
+      conversation={data.conversation}
+    />
+    < App
+      currentUser={data.conversation.participants[1]}
+      conversation={data.conversation}
+    />
+  </div>,
   rootElement
 );
