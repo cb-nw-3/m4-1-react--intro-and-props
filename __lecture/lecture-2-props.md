@@ -92,12 +92,19 @@ Make the components reusable by using props.
 function VideoPlayer(props) {
   return (
     <div>
-      <video
-        src="http://youtube.com/some-video"
-        width={480}
-        height={300}
-      />
+      <video src="http://youtube.com/some-video" width={480} height={300} />
       <p>Cat playing the piano!!</p>
+    </div>
+  );
+}
+```
+
+```jsx
+function VideoPlayer({ src, width, height, caption }) {
+  return (
+    <div>
+      <video src={src} width={width} height={height} />
+      <p>{caption}</p>
     </div>
   );
 }
@@ -129,7 +136,45 @@ function Tweet(props) {
 }
 ```
 
+```jsx
+function Tweet({ src, username, handle, postDate, tweetContent }) {
+  return (
+    <div>
+      <Avatar src={avatarsrc} />
+      <div>
+        <p>
+          <span className="user-name">{username}</span>
+          <span className="handle">@{handle}</span>
+          <span className="date">{postDate}</span>
+        </p>
+        <p>{tweetContent}</p>
+        <div>
+          <button>Reply</button>
+          <button>Retweet</button>
+          <button>Like</button>
+          <button>Share</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
 ---
+
+```jsx
+function Header(props) {
+  return (
+    <header>
+      <h1>My great website</h1>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+  );
+}
+```
 
 ```jsx
 function Header(props) {
@@ -153,9 +198,9 @@ Say we have some data:
 
 ```js
 const storeItems = [
-  { id: 'a', price: 19.99, name: 'Monocle' },
-  { id: 'b', price: 209.99, name: 'Cane' },
-  { id: 'c', price: 44.99, name: 'Top Hat' },
+  { id: "a", price: 19.99, name: "Monocle" },
+  { id: "b", price: 209.99, name: "Cane" },
+  { id: "c", price: 44.99, name: "Top Hat" },
 ];
 ```
 
@@ -207,9 +252,9 @@ Next, **map over our data**, using the component once per item:
 
 ```jsx
 const storeItems = [
-  { id: 'a', price: 19.99, name: 'Monocle' },
-  { id: 'b', price: 209.99, name: 'Cane' },
-  { id: 'c', price: 44.99, name: 'Top Hat' },
+  { id: "a", price: 19.99, name: "Monocle" },
+  { id: "b", price: 209.99, name: "Cane" },
+  { id: "c", price: 44.99, name: "Top Hat" },
 ];
 
 function App(props) {

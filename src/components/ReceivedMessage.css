@@ -1,0 +1,28 @@
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.chat-message > img {
+  width: 40px;
+  border-radius: 50%;
+}
+.nameAndMessage {
+  margin: 0 10px;
+  position: relative;
+}
+.receivedTip {
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+}
+.message {
+  background: #e9e9eb;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.name {
+  font-size: 0.8em;
+}

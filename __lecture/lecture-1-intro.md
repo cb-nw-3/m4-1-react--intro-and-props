@@ -44,7 +44,8 @@ function GoButton(props) {
   );
 }
 
-render(<GoButton onClick={() => alert('hi')} />);
+render(<GoButton onClick={() => alert("hi")} />);
+//props is a parameter. So props.onClick creates a key called onClick. So in the render, we declare what the value for that key needs to be and it is stored in the props object.
 ```
 
 ---
@@ -83,12 +84,12 @@ function GoButton(props) {
 // After
 function GoButton(props) {
   return React.createElement(
-    'button',
+    "button",
     {
-      className: 'btn',
+      className: "btn",
       onClick: props.handleClick,
     },
-    'Go!'
+    "Go!"
   );
 }
 ```
@@ -131,7 +132,7 @@ A _slot_ in which we can write JavaScript expressions.
 ```jsx
 let index = 0;
 
-<div id={'item-' + index} />;
+<div id={"item-" + index} />;
 ```
 
 ---
@@ -141,18 +142,15 @@ const awakeStudents = 10;
 const asleepStudents = 0;
 
 render(
-  <div>
-    There are {awakeStudents + asleepStudents} students in
-    the class.
-  </div>
+  <div>There are {awakeStudents + asleepStudents} students in the class.</div>
 );
 ```
 
 ---
 
 ```jsx
-<li className={isOnline && 'green'}>{user.username}</li>
-
+<li className={isOnline && "green"}>{user.username}</li>
+//if the person isOnline, it'll use the classname green. Otherwise, isOnline will be evaluted to false, className will be passed the boolean value of false and the li won't have a className.
 // ⚠️ New notation! another way to use of &&.
 ```
 
@@ -177,6 +175,9 @@ let age = 10;
 </div>;
 ```
 
+<div class= 'wrapper'>
+  <img src="/images/cake.jpg" alt="Photo of fancy birthday cake">
+  <p></p>
 ---
 
 Convert this one too:
@@ -186,16 +187,20 @@ let agreeToTerms = false;
 
 <div>
   <label htmlFor="terms-of-service">
-    <input type="checkbox" id="terms-of-service" />I agree
-    to the terms
+    <input type="checkbox" id="terms-of-service" />I agree to the terms
   </label>
 
-  {agreeToTerms && (
-    <div>
-      YOUR SOUL BELONGS TO ME MWAHAHAHAHAAAAAAHHHHHH!!!
-    </div>
-  )}
+  {agreeToTerms && <div>YOUR SOUL BELONGS TO ME MWAHAHAHAHAAAAAAHHHHHH!!!</div>}
 </div>;
+```
+
+```html
+<div>
+  <label for="terms-of-service">
+    <input type="checkbox" id="teroms-of-service" />I agree to terms
+  </label>
+  <!-- since agreetoTerms is false, the div with "YOUR SOUL etc" will not be rendered -->
+</div>
 ```
 
 ---
@@ -205,16 +210,16 @@ Convert:
 ```jsx
 const pets = [
   {
-    name: 'Bark Obama',
+    name: "Bark Obama",
     age: 3,
-    species: 'dog',
-    breed: 'Labradoodle',
+    species: "dog",
+    breed: "Labradoodle",
   },
   {
-    name: 'Chairman Meow',
+    name: "Chairman Meow",
     age: 8,
-    species: 'cat',
-    breed: 'ragdoll',
+    species: "cat",
+    breed: "ragdoll",
   },
 ];
 
@@ -222,7 +227,7 @@ const pets = [
   <h1 className="title">My pets:</h1>
   <ul>
     <li>
-      <h2>{pets[0].name}</h2>
+      <h2>{pets[0].name}</h2> //Bark Obama
       <table>
         <thead>
           <tr>
@@ -233,9 +238,9 @@ const pets = [
         </thead>
         <tbody>
           <tr>
-            <td>{pets[0].age}</td>
-            <td>{pets[0].species}</td>
-            <td>{pets[0].breed}</td>
+            <td>{pets[0].age}</td> //3
+            <td>{pets[0].species}</td> //dog
+            <td>{pets[0].breed}</td> //labradoodle
           </tr>
         </tbody>
       </table>
@@ -279,10 +284,7 @@ const pets = [
 
 ```jsx
 // app.js
-ReactDOM.render(
-  <div>Hello world</div>,
-  document.querySelector('#root')
-);
+ReactDOM.render(<div>Hello world</div>, document.querySelector("#root"));
 ```
 
 ---
