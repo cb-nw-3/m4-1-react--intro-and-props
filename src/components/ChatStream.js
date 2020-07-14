@@ -15,14 +15,20 @@ import "./ChatStream.css";
 function ChatStream({ messages, currentUser }) {
   return (
     <section className="chat-stream">
-      {messages.map((message) => {
+      {messages.map((message, index) => {
         let messageType = "";
         if (currentUser === message.user) {
           messageType = "sent";
         } else {
           messageType = "received";
         }
-        return <ChatMessage message={message} messageType={messageType} />;
+        return (
+          <ChatMessage
+            message={message}
+            messageType={messageType}
+            key={`${message.user.username} + ${index} `}
+          />
+        );
       })}
     </section>
   );
