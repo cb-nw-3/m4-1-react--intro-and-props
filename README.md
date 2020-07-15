@@ -82,8 +82,8 @@ If we check `src/index.js`, we find the "top" of the React tree:
 
 ```jsx
 ReactDOM.render(
-  <App currentUser={data.currentUser} conversation={data.conversation} />,
-  rootElement
+    <App currentUser={data.currentUser} conversation={data.conversation} />,
+    rootElement
 );
 ```
 
@@ -102,9 +102,9 @@ Our `App` component, in `src/components/App.js`, renders the following:
 
 ```jsx
 <div className="wrapper">
-  <Header />
-  <ChatStream />
-  <Footer />
+    <Header />
+    <ChatStream />
+    <Footer />
 </div>
 ```
 
@@ -112,10 +112,10 @@ We can also see that we import an `App.css`, which adds a bit of styling:
 
 ```css
 .wrapper {
-  font-family: sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 ```
 
@@ -154,12 +154,12 @@ In our `src/data.js` file, we see that the `messages` array takes this shape:
 
 ```js
 [
-  {
-    user: users.elaine,
-    body: 'How about you bring me back something?',
-    timestamp: '11:38',
-  },
-  /* ...lots more like this */
+    {
+        user: users.elaine,
+        body: "How about you bring me back something?",
+        timestamp: "11:38",
+    },
+    /* ...lots more like this */
 ];
 ```
 
@@ -195,11 +195,11 @@ We can solve this by mapping over the `messages` prop we provided to `ChatStream
 
 ```js
 return (
-  <section className="chat-stream">
-    {props.messages.map((message) => {
-      return <div>{message.body}</div>;
-    })}
-  </section>
+    <section className="chat-stream">
+        {props.messages.map((message) => {
+            return <div>{message.body}</div>;
+        })}
+    </section>
 );
 ```
 
@@ -241,12 +241,12 @@ Create two new files, `src/ChatMessage.js` and `src/ChatMessage.css`. Write the 
 > **Please no copy/paste!** You'll write _a lot_ of new components over this module. It's worth taking the time to get used to writing them out.
 
 ```js
-import React from 'react';
+import React from "react";
 
-import './ChatMessage.css';
+import "./ChatMessage.css";
 
 function ChatMessage(props) {
-  return <div className="chat-message"></div>;
+    return <div className="chat-message"></div>;
 }
 
 export default ChatMessage;
@@ -261,17 +261,17 @@ Inside `ChatStream`, we're mapping through each message in the array. Pass that 
 ```jsx
 // Inside `ChatStream`
 {
-  props.messages.map((message) => {
-    return <ChatMessage message={message} />;
-  });
+    props.messages.map((message) => {
+        return <ChatMessage message={message} />;
+    });
 }
 ```
 
 Next, update the `ChatMessage` component to render:
 
-- The message body
-- The user's name
-- The user's avatar
+-   The message body
+-   The user's name
+-   The user's avatar
 
 Add some styles to make it look sorta like iMessage. **For now, every message can have the same styles**. You don't need any blue message bubbles, only grey.
 
@@ -291,9 +291,9 @@ In iMessage, the messages that _you_ send don't look the same as messages that o
 
 Specifically, these things are different:
 
-- Blue background, white text
-- Aligned to the right, not the left
-- No username and avatar shown
+-   Blue background, white text
+-   Aligned to the right, not the left
+-   No username and avatar shown
 
 Inside `data.js`, there's a field, `currentUser`. This tells us which user is the one "logged in". We can use this to determine which messages were sent by our user.
 
@@ -411,11 +411,11 @@ Here's our new `ChatMessage` component:
 
 ```jsx
 function ChatMessage(props) {
-  if (props.messageType === 'sent') {
-    return <SentMessage message={props.message} />;
-  } else {
-    return <ReceivedMessage message={props.message} />;
-  }
+    if (props.messageType === "sent") {
+        return <SentMessage message={props.message} />;
+    } else {
+        return <ReceivedMessage message={props.message} />;
+    }
 }
 ```
 
@@ -439,8 +439,8 @@ In iMessage, the chat bubbles have little tips, to make them look like speech bu
 
 Two images are made available in the `public/assets` folder
 
-- `tip-sent.svg`
-- `tip-received.svg`
+-   `tip-sent.svg`
+-   `tip-received.svg`
 
 Use an `<img>` tag to add these to the ChatMessage components. _TIP_: the `src` attributes will be "/assets/tip-sent.svg" and "/assets/tip-received.svg".
 
@@ -498,14 +498,14 @@ Your mission, should you choose to accept it: take the lessons you've learned fr
 
 There are quite a few differences:
 
-- There's a list of conversations on the left-hand sidebar. Our data file only has 1 conversation. You can choose to simply have a single conversation in the sidebar, or create more fake data
-- A green bar along the top shows the current user's name, as well as the name of the chat (in this screenshot it's Marketing Team, but in your app, it could be a comma-separated list of the other participants)
-- Totally different styling
-- Photos can be part of messages
+-   There's a list of conversations on the left-hand sidebar. Our data file only has 1 conversation. You can choose to simply have a single conversation in the sidebar, or create more fake data
+-   A green bar along the top shows the current user's name, as well as the name of the chat (in this screenshot it's Marketing Team, but in your app, it could be a comma-separated list of the other participants)
+-   Totally different styling
+-   Photos can be part of messages
 
 It's likely that you won't have time to make this a perfect clone, so feel free to focus on whichever elements you're most interestd in.
 
 To get an initial setup, you can either:
 
-- Clone the repository again, and use the fresh "workshop" folder
-- Check out another git branch, and work in that branch
+-   Clone the repository again, and use the fresh "workshop" folder
+-   Check out another git branch, and work in that branch
