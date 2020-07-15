@@ -9,7 +9,15 @@
     font-weight: bold;
 }
 
+.headerIcon {
+    text-align: center;
+    padding-top: 15px;
+}
 
+.headerIcon img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .message {
     padding: 12px 10px 12px 10px;

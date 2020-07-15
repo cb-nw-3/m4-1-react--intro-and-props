@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import "./ChatMessage.css"
 
 const PartisipantList = ({ currentUser, partisipants }) => {
 	const filteredPartisipants = partisipants.filter((user) => {
@@ -8,7 +9,7 @@ const PartisipantList = ({ currentUser, partisipants }) => {
 		}
 	});
 	return (
-		<div>
+		<div className="headerIcon">
 			{filteredPartisipants.map((user) => {
 				return <Avatar src={user.avatar} />;
 			})}
