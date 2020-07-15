@@ -14,7 +14,7 @@ yarn install
 
 ```bash
 yarn start
-```
+
 
 The first command installs the third-party dependencies (like React), and the second command starts a development server.
 
@@ -25,19 +25,21 @@ It works similarly to `nodemon` - when you save a file, it should auto-restart, 
 The directory structure of this project is on the left, and looks like:
 
 ```
-├── __lecture
-├── __solution
+
+├── **lecture
+├── **solution
 ├── public
-│   ├── assets
-│   │   └── [images]
-│   └── index.html
+│ ├── assets
+│ │ └── [images]
+│ └── index.html
 ├── src
-│   ├── components
-│   │   └── [component js and css]
-│   ├── data.js
-│   ├── index.js
-│   └── styles.css
+│ ├── components
+│ │ └── [component js and css]
+│ ├── data.js
+│ ├── index.js
+│ └── styles.css
 └── package.json
+
 ```
 
 `package.json` is a **manifest** of our project and its dependencies. We _don't need to edit it_ for this workshop.
@@ -49,18 +51,20 @@ Finally, `src` is where all the good stuff lives.
 To bootstrap this workshop, we've created several JS and CSS files:
 
 ```
+
 ├── components
-│   ├── App.css
-│   ├── App.js
-│   ├── ChatStream.css
-│   ├── ChatStream.js
-│   ├── Footer.css
-│   ├── Footer.js
-│   ├── Header.css
-│   └── Header.js
+│ ├── App.css
+│ ├── App.js
+│ ├── ChatStream.css
+│ ├── ChatStream.js
+│ ├── Footer.css
+│ ├── Footer.js
+│ ├── Header.css
+│ └── Header.js
 ├── data.js
 └── index.js
-```
+
+````
 
 `data.js` includes all the information we need about who our chat participants are, and what messages they've sent. It also tells us who the "currentUser" is.
 
@@ -85,7 +89,7 @@ ReactDOM.render(
   <App currentUser={data.currentUser} conversation={data.conversation} />,
   rootElement
 );
-```
+````
 
 We're rendering the `App` component, and we're setting its props to:
 
@@ -156,8 +160,8 @@ In our `src/data.js` file, we see that the `messages` array takes this shape:
 [
   {
     user: users.elaine,
-    body: 'How about you bring me back something?',
-    timestamp: '11:38',
+    body: "How about you bring me back something?",
+    timestamp: "11:38",
   },
   /* ...lots more like this */
 ];
@@ -196,7 +200,7 @@ We can solve this by mapping over the `messages` prop we provided to `ChatStream
 ```js
 return (
   <section className="chat-stream">
-    {props.messages.map(message => {
+    {props.messages.map((message) => {
       return <div>{message.body}</div>;
     })}
   </section>
@@ -241,9 +245,9 @@ Create two new files, `src/ChatMessage.js` and `src/ChatMessage.css`. Write the 
 > **Please no copy/paste!** You'll write _a lot_ of new components over this module. It's worth taking the time to get used to writing them out.
 
 ```js
-import React from 'react';
+import React from "react";
 
-import './ChatMessage.css';
+import "./ChatMessage.css";
 
 function ChatMessage(props) {
   return <div className="chat-message"></div>;
@@ -261,7 +265,7 @@ Inside `ChatStream`, we're mapping through each message in the array. Pass that 
 ```jsx
 // Inside `ChatStream`
 {
-  props.messages.map(message => {
+  props.messages.map((message) => {
     return <ChatMessage message={message} />;
   });
 }
@@ -411,7 +415,7 @@ Here's our new `ChatMessage` component:
 
 ```jsx
 function ChatMessage(props) {
-  if (props.messageType === 'sent') {
+  if (props.messageType === "sent") {
     return <SentMessage message={props.message} />;
   } else {
     return <ReceivedMessage message={props.message} />;

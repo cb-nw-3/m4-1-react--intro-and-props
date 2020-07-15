@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import './ChatStream.css';
+import ChatMessage from "./ChatMessage";
+import "./ChatStream.css";
 
 // The current user's messages should have:
 // - a text color of #FFF
@@ -10,8 +11,17 @@ import './ChatStream.css';
 // - a text color of #000
 // - a background color of #e9e9eb
 
+//
+//Creating React elements (eg. `<ChatStream>`) is like calling a function, and props are like the _arguments_
 function ChatStream(props) {
-  return <section className="chat-stream">{/* Your code here! */}</section>;
+  console.log("props from chatstream", props);
+  return (
+    <section className="chat-stream">
+      {props.messages.map((message) => {
+        return <ChatMessage message={message} />;
+      })}
+    </section>
+  );
 }
 
 export default ChatStream;
