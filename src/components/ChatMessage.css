@@ -1,0 +1,109 @@
+
+.all-messages
+{
+    margin-top: 10px;
+}
+.chat-username, .chat-message
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.chat-username
+{
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-left: 10px;
+
+    color: rgb(138, 138, 138);
+}
+
+.avatar-image
+{
+    max-height:40px;
+    border-radius: 50%;
+}
+
+.chat-avatar
+{
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.chat-message
+{
+    background-color: rgba(220, 220, 220, 0.625);
+    border-radius: 7px;
+    /* padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+    padding:9px;
+    z-index: 99;
+
+
+}
+
+
+.chat-message-current-user
+{
+    background-color: rgba(17, 133, 247, 1.0);
+    color: white;
+    border-radius: 7px;
+    padding: 10px;
+    margin-left: auto;
+
+    
+}
+
+.messageFlex-current-user
+{
+    display: flex;
+    padding-bottom: 20px;
+    align-items: flex-end;
+
+}
+
+.bluetip
+{
+    display: flex;
+    z-index: 200;
+    position: relative;
+    margin-left: -6px;
+    margin-bottom: -3px;
+    background-color: transparent;
+    
+}
+
+
+
+.messageFlex
+{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.inner-flex
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+.recieved-message-speech-bubble
+{
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.greytip
+{
+    display: flex;
+    z-index: 200;
+    position: relative;
+    margin-right: -6px;
+    margin-bottom: -2px;
+    background-color: transparent;
+    
+}

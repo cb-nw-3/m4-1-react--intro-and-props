@@ -8,3 +8,21 @@ header {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15),
     0px 1px 0.5px rgba(0, 0, 0, 0.075);
 }
+
+
+header
+{
+  text-align: center;
+}
+.header-avatars
+{
+  display: flex;
+  justify-content: center;
+}
+
+.individual-avatar
+{
+  padding: 20px;
+}
+
+
