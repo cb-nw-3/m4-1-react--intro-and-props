@@ -5,6 +5,7 @@
   margin: 20px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .message-box {
@@ -32,4 +33,15 @@
 .avatar-img {
   width: 35px;
   border-radius: 50%;
+}
+
+.current-sender-message-body {
+  padding: 10px;
+  background: #1185f7;
+  color: #fff;
+  border-radius: 15px;
+}
+
+#current-sender-message-box {
+  flex-direction: row-reverse;
 }
