@@ -1,0 +1,30 @@
+.chat-message {
+  position: relative;
+  font-size: 30px;
+  display: flex;
+  margin: 60px;
+}
+
+.avatar {
+  margin-left: 30px;
+}
+
+.avatar img {
+  border-radius: 25px;
+  height: 60px;
+  transform: translate(50%, 70%);
+}
+
+.username {
+  font-size: 20px;
+  transform: translate(110%, 10%);
+}
+
+.message {
+  font-size: 25px;
+  position: relative;
+  padding: 15px;
+  border-radius: 15px;
+  background: #e9e9eb;
+  transform: translateY(60%);
+}
