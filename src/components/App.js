@@ -7,10 +7,17 @@ import Footer from './Footer';
 import './App.css';
 
 function App(props) {
+  // console.log(props);
   return (
     <div className="wrapper">
       <Header />
-      <ChatStream />
+      {/* This get the imported function "ChatStream". The messages that we need is taken from the "prop"*/}
+      {/* Commented out as part of exercise 3 */}
+      {/* <ChatStream messages={props.conversation.messages} /> */}
+      <ChatStream
+        messages={props.conversation.messages}
+        currentUser={props.currentUser.username}
+      />
       <Footer />
     </div>
   );
