@@ -11,7 +11,13 @@ import './ChatStream.css';
 // - a background color of #e9e9eb
 
 function ChatStream(props) {
-  return <section className="chat-stream">{/* Your code here! */}</section>;
+  return (
+    <section className="chat-stream">
+      {props.messages.map((messages) => {
+        return <div>{messages.body}</div>;
+      })}
+    </section>
+  );
 }
 
 export default ChatStream;
