@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import ChatMessage from './ChatMessage';
+import ChatMessage from "./ChatMessage";
 
-import './ChatStream.css';
+import "./ChatStream.css";
 
 function ChatStream(props) {
   return (
     <div className="chat-stream">
-      {props.messages.map(message => (
+      {props.messages.map((message) => (
         <ChatMessage
-          messageType={message.user === props.currentUser ? 'sent' : 'received'}
+          messageType={message.user === props.currentUser ? "sent" : "received"}
           message={message}
         />
       ))}

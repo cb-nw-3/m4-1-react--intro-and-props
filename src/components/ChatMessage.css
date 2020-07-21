@@ -1,0 +1,41 @@
+/* // The current user's messages should have:
+// - a text color of #FFF
+// - a background color of #1185f7
+//
+// Other participant's messages should have:
+// - a text color of #000
+// - a background color of #e9e9eb */
+
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin: 15px 5px;
+}
+
+.sent {
+  background-color: #1185f7;
+  color: #fff;
+  border-radius: 15px;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  position: relative;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.received {
+  background-color: e9e9eb;
+  color: #000;
+  border-radius: 15px;
+  position: relative;
+  left: 0;
+}
+
+.image {
+  width: 30px;
+  border-radius: 50px;
+}
+
+.image.received {
+  display: none;
+}
