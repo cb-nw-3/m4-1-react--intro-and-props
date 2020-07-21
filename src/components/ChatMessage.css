@@ -1,0 +1,26 @@
+.chat-message {
+    margin:10px 0px 0px 25px;
+}
+
+.chat-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.chat-message .chat-name {
+    margin-left: 65px;
+}
+
+.chat-message .avatar-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.chat-message .chat-text {
+    margin: 0 0 5px 10px;
+    padding: 10px 12px;
+    background: #e9e9eb;
+    border-radius: 8px;
+}
