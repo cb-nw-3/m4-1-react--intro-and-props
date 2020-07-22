@@ -1,26 +1,53 @@
-.chat-message {
-    margin:10px 0px 0px 25px;
-}
+/* This is not the driest CSS.. */
 
-.chat-text-wrapper {
+.sent-message-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: flex-start;
 }
 
-.chat-message .chat-name {
-    margin-left: 65px;
+.received-message-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height:100px;
 }
 
-.chat-message .avatar-picture {
+.text-wrapper .avatar-picture {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-.chat-message .chat-text {
+.sent-message-wrapper .avatar-picture {
+    display:none;
+}
+
+.chat-name {
+    color: darkgray;
+    position: relative;
+    width: 25px;
+}
+
+.received-message-wrapper .chat-name {
+    left: 100px;
+    top: 5px;
+}
+
+.sent-message-wrapper .chat-name {
+    right: 55px;
+    bottom: 30px;
+}
+
+.text {
     margin: 0 0 5px 10px;
     padding: 10px 12px;
     background: #e9e9eb;
     border-radius: 8px;
+}
+
+.sent-message-wrapper .text {
+    color: white;
+    background: #e9e9eb;
+    background: #1185f7;
 }
