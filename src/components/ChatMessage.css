@@ -1,0 +1,53 @@
+/* This is not the driest CSS.. */
+
+.sent-message-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.received-message-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height:100px;
+}
+
+.text-wrapper .avatar-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.sent-message-wrapper .avatar-picture {
+    display:none;
+}
+
+.chat-name {
+    color: darkgray;
+    position: relative;
+    width: 25px;
+}
+
+.received-message-wrapper .chat-name {
+    left: 100px;
+    top: 5px;
+}
+
+.sent-message-wrapper .chat-name {
+    right: 55px;
+    bottom: 30px;
+}
+
+.text {
+    margin: 0 0 5px 10px;
+    padding: 10px 12px;
+    background: #e9e9eb;
+    border-radius: 8px;
+}
+
+.sent-message-wrapper .text {
+    color: white;
+    background: #e9e9eb;
+    background: #1185f7;
+}
