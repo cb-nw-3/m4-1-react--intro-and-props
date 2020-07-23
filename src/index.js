@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import data from './data';
-import App from './components/App';
+import data, { users } from "./data";
+import App from "./components/App";
 
-import './styles.css';
+import "./styles.css";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  <App currentUser={data.currentUser} conversation={data.conversation} />,
+  <div style={{ display: `flex` }}>
+    <App currentUser={users.george} conversation={data.conversation} />
+    {/* <App currentUser={users.elaine} conversation={data.conversation} /> */}
+  </div>,
   rootElement
 );
