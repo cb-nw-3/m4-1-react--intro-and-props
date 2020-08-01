@@ -1,0 +1,61 @@
+.chatWrapperReceived {
+  margin-top: 15px;
+  display: flex;
+  padding: 10px;
+  position: relative;
+}
+
+.chatWrapperSent {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.bodyWrapper {
+  display: flex;
+}
+
+.avatar {
+  z-index: 10;
+  margin-top: 15px;
+  border-radius: 50%;
+  height: 35px;
+}
+
+.name {
+  margin-left: 12px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.chat-message {
+  position: relative;
+  background-color: #e9e9eb;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
+.chat-message-sent {
+  background-color: #1185f7;
+  color: white;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
+.tail-sent {
+  position: relative;
+  left: -4.7px;
+}
+
+.tail-received {
+  position: relative;
+  right: -1.5px;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}

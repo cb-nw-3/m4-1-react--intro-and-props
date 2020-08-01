@@ -8,3 +8,15 @@ body {
 *:after {
   box-sizing: border-box;
 }
+
+.wrapperAll {
+  display: flex;
+  width: 100vw;
+  height: max-content;
+}
+
+.wrapperAll > div {
+  flex: 1;
+  padding: 0 10px;
+  min-height: max-content;
+}

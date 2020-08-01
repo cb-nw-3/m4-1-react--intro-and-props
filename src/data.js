@@ -19,6 +19,7 @@ export const users = {
 
 export default {
   currentUser: users.elaine,
+  currentUser2: users.george,
   conversation: {
     participants: [users.elaine, users.george, users.jerry],
     messages: [
